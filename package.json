@@ -1,0 +1,10 @@
+{
+  "name": "wedding-website",
+  "version": "0.0.1",
+  "description": "Zack and Nina's wedding website",
+  "scripts": {
+    "start": ""
+  },
+  "author": "Zack Stickles",
+  "license": "ISC"
+}
