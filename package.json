@@ -3,8 +3,14 @@
   "version": "0.0.1",
   "description": "Zack and Nina's wedding website",
   "scripts": {
-    "start": ""
+    "start": "parcel src/index.html"
   },
   "author": "Zack Stickles",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  }
 }
