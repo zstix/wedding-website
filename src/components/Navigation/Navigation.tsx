@@ -1,28 +1,20 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
+import { Page } from "../../types";
 import Container from "../Container";
 
-interface Page {
-  title: string;
-  path: string;
+interface NavigationProps {
+  pages: Page[];
 }
 
-const Navigation: React.FC = () => {
-  const pages: Page[] = [
-    { title: "Story", path: "" },
-    { title: "Photos", path: "" },
-    { title: "Event Details", path: "" },
-    { title: "RSVP", path: "" },
-    { title: "What to Do", path: "" },
-    { title: "RSVP", path: "" }
-  ];
-
+const Navigation: React.FC<NavigationProps> = ({ pages }) => {
   return (
     <Container className="zn-main-nav">
       <ul>
         {pages.map((page, i) => (
-          <li key={`page-${i}`}>
-            <a href={page.path}>{page.title}</a>
+          <li key={`link-${i}`}>
+            <Link to={page.path}>{page.title}</Link>
           </li>
         ))}
       </ul>
