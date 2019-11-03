@@ -3,18 +3,15 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Page } from "../types";
 import Navigation from "./Navigation/";
-
-// TODO: build these
-const HomePage: React.FC = () => <div>We're getting married!</div>;
-const Story: React.FC = () => <div>This is the story page</div>;
-const Photos: React.FC = () => <div>This is the Photos page</div>;
-const EventDetails: React.FC = () => <div>This is the Event Details page</div>;
-const RSVP: React.FC = () => <div>This is the RSVP page</div>;
-const WhatToDo: React.FC = () => <div>This is the What 2 Do page</div>;
-const FAQ: React.FC = () => <div>This is the FAQ page</div>;
+import HomePage from "./Pages/HomePage";
+import Story from "./Pages/Story";
+import Photos from "./Pages/Photos";
+import EventDetails from "./Pages/EventDetails";
+import RSVP from "./Pages/RSVP";
+import WhatToDo from "./Pages/WhatToDo";
+import FAQ from "./Pages/FAQ";
 
 const App: React.FC = () => {
-  // TODO: components
   const pages: Page[] = [
     { title: "Story", path: "/story", component: Story },
     { title: "Photos", path: "/photos", component: Photos },
