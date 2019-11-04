@@ -7,6 +7,9 @@
   },
   "author": "Zack Stickles",
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/zstix/wedding-website"
+  },
   "dependencies": {
     "parcel-bundler": "^1.12.4",
     "react": "^16.11.0",
