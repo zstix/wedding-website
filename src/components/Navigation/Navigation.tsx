@@ -10,15 +10,17 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ pages }) => {
   return (
-    <Container className="zn-main-nav">
-      <ul>
-        {pages.map((page, i) => (
-          <li key={`link-${i}`}>
-            <Link to={page.path}>{page.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </Container>
+    <div className="zn-main-nav">
+      <Container>
+        <ul>
+          {pages.map((page, i) => (
+            <li key={`link-${i}`}>
+              <Link to={page.path}>{page.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </div>
   );
 };
 

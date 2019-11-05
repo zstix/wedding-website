@@ -1,5 +1,9 @@
 .zn-main-nav {
   padding: 1rem 0;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
 
   ul {
     list-style: none;
