@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Page } from "../types";
 import Navigation from "./Navigation/";
+import Title from "./Title";
 import HomePage from "./Pages/HomePage";
 import Story from "./Pages/Story";
 import Photos from "./Pages/Photos";
@@ -23,6 +24,7 @@ const App: React.FC = () => {
 
   return (
     <BrowserRouter>
+      <Title />
       <Navigation pages={pages} />
 
       <Switch>
