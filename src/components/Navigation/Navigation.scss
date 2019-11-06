@@ -1,5 +1,4 @@
 .zn-main-nav {
-  padding: 1rem 0;
   background-color: #eee;
   border-bottom: 1px solid #ccc;
   position: sticky;
@@ -8,8 +7,11 @@
   ul {
     list-style: none;
     padding: 0;
+    padding-top: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap;
   }
 
   a {
@@ -17,7 +19,8 @@
     color: #333;
     font-size: 1.5rem;
     position: relative;
-    padding: 1rem;
+    padding: 0 2rem 1rem;
+    display: inline-block;
   }
 
   a::after {
