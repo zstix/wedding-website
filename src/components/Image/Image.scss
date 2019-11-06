@@ -1,0 +1,20 @@
+.zn-image {
+  margin: 1rem;
+
+  &.zn-image-center {
+    margin: 1rem auto;
+  }
+
+  &.zn-image-full {
+    margin: 0;
+    width: 100%;
+  }
+
+  &.zn-image-left {
+    float: left;
+  }
+
+  &.zn-image-right {
+    float: right;
+  }
+}
