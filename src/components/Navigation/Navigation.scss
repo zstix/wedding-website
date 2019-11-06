@@ -21,6 +21,11 @@
     position: relative;
     padding: 0 2rem 1rem;
     display: inline-block;
+
+    &.zn-disabled {
+      mix-blend-mode: difference;
+      cursor: default;
+    }
   }
 
   a::after {
@@ -32,6 +37,10 @@
     bottom: 0.5rem;
     left: 50%;
     transition: all 0.15s ease-in-out;
+  }
+
+  a.zn-disabled::after {
+    display: none;
   }
 
   a:hover::after {
