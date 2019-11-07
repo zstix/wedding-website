@@ -4,7 +4,7 @@
   "description": "Zack and Nina's wedding website",
   "scripts": {
     "dev": "parcel src/index.html",
-    "start": "parcel serve src/index.html --port 80"
+    "start": "parcel src/index.html --port 80"
   },
   "author": "Zack Stickles",
   "license": "ISC",
