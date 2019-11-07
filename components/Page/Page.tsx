@@ -32,7 +32,7 @@ const Page: NextPage<PageProps> = ({ children }) => (
     </Head>
 
     <Title />
-    <Navigation pages={pages} />
+    {/* <Navigation pages={pages} /> */}
     <main className="zn-page">{children}</main>
   </>
 );
