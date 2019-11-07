@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Zack and Nina's wedding website",
   "scripts": {
-    "start": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "start": "parcel serve src/index.html --port 80"
   },
   "author": "Zack Stickles",
   "license": "ISC",
@@ -11,16 +12,16 @@
     "url": "https://github.com/zstix/wedding-website"
   },
   "dependencies": {
-    "parcel-bundler": "^1.12.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "sass": "^1.23.3",
+    "typescript": "^3.6.4",
+    "parcel-bundler": "^1.12.4"
   },
   "devDependencies": {
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
-    "@types/react-router-dom": "^5.1.2",
-    "sass": "^1.23.3",
-    "typescript": "^3.6.4"
+    "@types/react-router-dom": "^5.1.2"
   }
 }
