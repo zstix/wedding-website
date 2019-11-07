@@ -20,21 +20,27 @@ const pages: Link[] = [
   { title: "FAQ", path: "/faq" }
 ];
 
-const Page: NextPage<PageProps> = ({ children }) => (
-  <>
-    <Head>
-      {/* TODO: update these based on domain */}
-      <title>Zack & Nina</title>
-      <link
-        href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Goudy+Bookletter+1911&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
+const Page: NextPage<PageProps> = ({ children }) => {
+  const names =
+    window.location.hostname === "ninaandzack.com"
+      ? ["Nina", "Zack"]
+      : ["Zack", "Nina"];
 
-    <Title />
-    {/* <Navigation pages={pages} /> */}
-    <main className="zn-page">{children}</main>
-  </>
-);
+  return (
+    <>
+      <Head>
+        <title>{names.join(" & ")}</title>
+        <link
+          href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Goudy+Bookletter+1911&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
+      <Title names={names} />
+      {/* <Navigation pages={pages} /> */}
+      <main className="zn-page">{children}</main>
+    </>
+  );
+};
 
 export default Page;
