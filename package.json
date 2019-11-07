@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Zack and Nina's wedding website",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "start": "parcel src/index.html --port 80"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "author": "Zack Stickles",
   "license": "ISC",
@@ -12,16 +13,17 @@
     "url": "https://github.com/zstix/wedding-website"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^9.1.2",
+    "node-sass": "^4.13.0",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2",
-    "sass": "^1.23.3",
-    "typescript": "^3.6.4",
-    "parcel-bundler": "^1.12.4"
+    "react-dom": "^16.11.0"
   },
   "devDependencies": {
+    "@types/node": "^12.12.6",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
-    "@types/react-router-dom": "^5.1.2"
+    "@types/react-router-dom": "^5.1.2",
+    "typescript": "^3.7.2"
   }
 }

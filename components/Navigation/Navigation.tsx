@@ -1,11 +1,10 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 
-import { Page } from "../../types";
+import { Link } from "../../types";
 import Container from "../Container";
 
 interface NavigationProps {
-  pages: Page[];
+  pages: Link[];
 }
 
 const Navigation: React.FC<NavigationProps> = ({ pages }) => {
@@ -15,7 +14,7 @@ const Navigation: React.FC<NavigationProps> = ({ pages }) => {
         <ul>
           {pages.map((page, i) => (
             <li key={`link-${i}`}>
-              <Link to={page.path}>{page.title}</Link>
+              <a href={page.path}>{page.title}</a>
             </li>
           ))}
         </ul>
