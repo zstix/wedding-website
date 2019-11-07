@@ -15,11 +15,7 @@ const Navigation: React.FC<NavigationProps> = ({ pages }) => {
         <ul>
           {pages.map((page, i) => (
             <li key={`link-${i}`}>
-              {page.disabled ? (
-                <a className="zn-disabled">{page.title}</a>
-              ) : (
-                <Link to={page.path}>{page.title}</Link>
-              )}
+              <Link to={page.path}>{page.title}</Link>
             </li>
           ))}
         </ul>

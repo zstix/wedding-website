@@ -14,28 +14,18 @@ import FAQ from "./Pages/FAQ";
 
 const App: React.FC = () => {
   const pages: Page[] = [
-    { title: "Story", path: "/story", component: Story, disabled: true },
-    { title: "Photos", path: "/photos", component: Photos, disabled: true },
-    {
-      title: "Event Details",
-      path: "/event-details",
-      component: EventDetails,
-      disabled: true
-    },
-    { title: "RSVP", path: "/rsvp", component: RSVP, disabled: true },
-    {
-      title: "What to Do",
-      path: "/what-to-do",
-      component: WhatToDo,
-      disabled: true
-    },
-    { title: "FAQ", path: "/faq", component: FAQ, disabled: true }
+    { title: "Story", path: "/story", component: Story },
+    { title: "Photos", path: "/photos", component: Photos },
+    { title: "Event Details", path: "/event-details", component: EventDetails },
+    { title: "RSVP", path: "/rsvp", component: RSVP },
+    { title: "What to Do", path: "/what-to-do", component: WhatToDo },
+    { title: "FAQ", path: "/faq", component: FAQ }
   ];
 
   return (
     <BrowserRouter>
       <Title />
-      <Navigation pages={pages} />
+      {/* <Navigation pages={pages} /> */}
 
       <Switch>
         <Route exact path="/" component={HomePage} />
