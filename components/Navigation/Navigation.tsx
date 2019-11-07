@@ -9,7 +9,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ pages }) => {
   return (
-    <div className="zn-main-nav">
+    <nav className="zn-main-nav">
       <Container>
         <ul>
           {pages.map((page, i) => (
@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({ pages }) => {
           ))}
         </ul>
       </Container>
-    </div>
+    </nav>
   );
 };
 

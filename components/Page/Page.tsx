@@ -30,9 +30,10 @@ const Page: NextPage<PageProps> = ({ children }) => (
         rel="stylesheet"
       />
     </Head>
+
     <Title />
     <Navigation pages={pages} />
-    {children}
+    <main className="zn-page">{children}</main>
   </>
 );
 
