@@ -21,10 +21,8 @@ const pages: Link[] = [
 ];
 
 const Page: NextPage<PageProps> = ({ children }) => {
-  const names =
-    window.location.hostname === "ninaandzack.com"
-      ? ["Nina", "Zack"]
-      : ["Zack", "Nina"];
+  // TODO: get this working with NEXT and hosting solution
+  const names = ["Zack", "Nina"];
 
   return (
     <>
