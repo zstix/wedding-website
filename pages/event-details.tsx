@@ -22,7 +22,7 @@ const EventDetails: React.FC = () => (
         free to drop by whenever.
       </p>
 
-      <h2>Cerimony &amp; Reception</h2>
+      <h2>Ceremony &amp; Reception</h2>
       <p>
         5ish (TBD) May 23, 2020
         <br />

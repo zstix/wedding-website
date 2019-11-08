@@ -14,7 +14,7 @@ interface PageProps {
 const pages: Link[] = [
   { title: "Story", path: "/story" },
   { title: "Photos", path: "/photos" },
-  { title: "Event Details", path: "/event-details" },
+  { title: "Event Details", path: "/event-details", enabled: true },
   { title: "RSVP", path: "/rsvp" },
   { title: "What to Do", path: "/what-to-do" },
   { title: "FAQ", path: "/faq" }
@@ -35,7 +35,7 @@ const Page: NextPage<PageProps> = ({ children }) => {
       </Head>
 
       <Title names={names} />
-      {/* <Navigation pages={pages} /> */}
+      <Navigation pages={pages} />
       <main className="zn-page">{children}</main>
     </>
   );
