@@ -12,11 +12,14 @@ const Navigation: React.FC<NavigationProps> = ({ pages }) => {
     <nav className="zn-main-nav">
       <Container>
         <ul>
-          {pages.map((page, i) => (
-            <li key={`link-${i}`}>
-              <a href={page.path}>{page.title}</a>
-            </li>
-          ))}
+          {pages.map(
+            (page, i) =>
+              page.enabled && (
+                <li key={`link-${i}`}>
+                  <a href={page.path}>{page.title}</a>
+                </li>
+              )
+          )}
         </ul>
       </Container>
     </nav>
