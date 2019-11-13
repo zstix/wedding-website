@@ -23,6 +23,7 @@ const pages: Link[] = [
 const Page: NextPage<PageProps> = ({ children }) => {
   // TODO: get this working with NEXT and hosting solution
   const names = ["Zack", "Nina"];
+  console.log('host', window && window.location && window.location.host);
 
   return (
     <>
