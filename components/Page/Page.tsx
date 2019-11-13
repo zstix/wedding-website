@@ -20,26 +20,35 @@ const pages: Link[] = [
   { title: "FAQ", path: "/faq" }
 ];
 
-const Page: NextPage<PageProps> = ({ children }) => {
-  // TODO: get this working with NEXT and hosting solution
-  const names = ["Zack", "Nina"];
-  console.log('host', window && window.location && window.location.host);
+class Page extends React.Component<PageProps> {
+  state = {
+    names: ["Zack", "Nina"]
+  };
 
-  return (
-    <>
-      <Head>
-        <title>{names.join(" & ")}</title>
-        <link
-          href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Goudy+Bookletter+1911&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+  componentDidMount() {
+    console.log('href', window.location.host);
+  }
 
-      <Title names={names} />
-      <Navigation pages={pages} />
-      <main className="zn-page">{children}</main>
-    </>
-  );
+  render() {
+    const { names } = this.state;
+    const { children } = this.props;
+
+    return (
+      <>
+        <Head>
+          <title>{names.join(" & ")}</title>
+          <link
+            href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Goudy+Bookletter+1911&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
+
+        <Title names={names} />
+        <Navigation pages={pages} />
+        <main className="zn-page">{children}</main>
+      </>
+    );
+  };
 };
 
 export default Page;
