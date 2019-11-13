@@ -26,7 +26,9 @@ class Page extends React.Component<PageProps> {
   };
 
   componentDidMount() {
-    console.log('href', window.location.host);
+    if (window.location.host === 'www.ninaandzack.com') {
+      this.setState({ names: ["Nina", "Zack"] });
+    }
   }
 
   render() {
