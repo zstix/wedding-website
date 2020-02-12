@@ -17,7 +17,7 @@ const pages: Link[] = [
   { title: "Event Details", path: "/event-details", enabled: true },
   { title: "RSVP", path: "/rsvp" },
   { title: "What to Do", path: "/what-to-do" },
-  { title: "FAQ", path: "/faq" }
+  { title: "FAQ", path: "/faq", enabled: true }
 ];
 
 class Page extends React.Component<PageProps> {

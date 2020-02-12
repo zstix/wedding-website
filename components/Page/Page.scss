@@ -23,6 +23,16 @@ h3 {
   margin-top: 1rem;
 }
 
+a {
+  color: #0077cc;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .zn-page {
   line-height: 1.6rem;
   font-size: 1.2rem;
