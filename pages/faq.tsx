@@ -78,8 +78,7 @@ const faqs: Item[] = [
   },
   {
     question: "Where are you registered?",
-    // TODO: add links!
-    answer: "Your presence is our favorite present (Gah, bad pun). That being said, because you asked, we are registered with honeyfund and amazon."
+    answer: `Your presence is our favorite present (Gah, bad pun). That being said, because you asked, we are registered with <a href="https://www.honeyfund.com/wedding/teamzina" target="_blank">Honeyfund</a> and <i>Amazon</i>. We will be adding those links to the website shortly`
   },
   {
     question: "Can I take and post pictures of the wedding on social media?",
@@ -104,9 +103,13 @@ const FAQ: React.FC = () => {
 
   useEffect(() => {
     if (pos > 0) {
-      const $item = document.querySelectorAll<HTMLDivElement>('.faq-item')[pos - 1];
-      const top = $item.offsetTop - 80; // TODO: no magic numbers
-      window.scrollTo({ behavior: 'smooth', top });
+      try {
+        const $item = document.querySelectorAll<HTMLDivElement>('section')[pos - 1];
+        const top = $item.offsetTop - 80; // TODO: no magic numbers
+        window.scrollTo({ behavior: 'smooth', top });
+      } catch (e) {
+        console.error('Unable to scroll:', e);
+      }
     }
   }, [pos])
 
@@ -117,17 +120,18 @@ const FAQ: React.FC = () => {
 
         <p>
           {faqs.map((item, index) => (
-            <div key={`faq-link-${index}`}>
+            <span key={`faq-link-${index}`}>
               <a onClick={() => setPos(index + 1)}>{item.question}</a>
-            </div>
+              <br />
+            </span>
           ))}
         </p>
 
         {faqs.map((item, index) => (
-          <div key={`faq-${index}`} className="faq-item">
+          <section key={`faq-${index}`}>
             <h2>{item.question}</h2>
-            <p dangerouslySetInnerHTML={{ __html: item.answer }}></p>
-          </div>
+            <div dangerouslySetInnerHTML={{ __html: `<p>${item.answer}` }}></div>
+          </section>
         ))}
       </Container>
     </Page>
