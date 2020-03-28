@@ -14,10 +14,10 @@ interface PageProps {
 const pages: Link[] = [
   { title: "Story", path: "/story" },
   { title: "Photos", path: "/photos" },
-  { title: "Event Details", path: "/event-details", enabled: true },
+  { title: "Event Details", path: "/event-details" },
   { title: "RSVP", path: "/rsvp" },
   { title: "What to Do", path: "/what-to-do" },
-  { title: "FAQ", path: "/faq", enabled: true }
+  { title: "FAQ", path: "/faq" }
 ];
 
 class Page extends React.Component<PageProps> {
