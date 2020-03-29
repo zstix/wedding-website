@@ -17,7 +17,7 @@ const Carona: React.FC<CaronaProps> = ({ names }) => (
       <p>
         Thank you for all of your support and enthusiasm for our relationship and wedding. We hope to have an opportunity to dance, eat, toast, drink, laugh, reminisce, and love with you soon.
       </p>
-      <p>{names.join(' & ')}</p>
+      <p>- {names.join(' & ')}</p>
     </div>
 
     <img src="/images/us.jpg" />
