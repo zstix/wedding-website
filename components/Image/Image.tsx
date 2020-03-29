@@ -6,6 +6,7 @@ interface ImageProps {
   className?: string;
   position?: "full" | "center" | "left" | "right";
 }
+
 const Image: React.FC<ImageProps> = ({
   src,
   position = "center",

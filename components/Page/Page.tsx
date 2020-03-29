@@ -5,6 +5,9 @@ import Head from "next/head";
 import Navigation from "../Navigation";
 import Title from "../Title";
 
+import Container from "../Container";
+import Carona from '../Carona';
+
 import { Link } from "../../types";
 
 interface PageProps {
@@ -14,10 +17,10 @@ interface PageProps {
 const pages: Link[] = [
   { title: "Story", path: "/story" },
   { title: "Photos", path: "/photos" },
-  { title: "Event Details", path: "/event-details", enabled: true },
+  { title: "Event Details", path: "/event-details" },
   { title: "RSVP", path: "/rsvp" },
   { title: "What to Do", path: "/what-to-do" },
-  { title: "FAQ", path: "/faq", enabled: true }
+  { title: "FAQ", path: "/faq" }
 ];
 
 class Page extends React.Component<PageProps> {
@@ -47,7 +50,12 @@ class Page extends React.Component<PageProps> {
 
         <Title names={names} />
         <Navigation pages={pages} />
-        <main className="zn-page">{children}</main>
+        {/* <main className="zn-page">{children}</main> */}
+        <main className="zn-page">
+          <Container>
+            <Carona names={names} />
+          </Container>
+        </main>
       </>
     );
   };
