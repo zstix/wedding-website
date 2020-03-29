@@ -5,6 +5,9 @@ import Head from "next/head";
 import Navigation from "../Navigation";
 import Title from "../Title";
 
+import Container from "../Container";
+import Carona from '../Carona';
+
 import { Link } from "../../types";
 
 interface PageProps {
@@ -47,7 +50,12 @@ class Page extends React.Component<PageProps> {
 
         <Title names={names} />
         <Navigation pages={pages} />
-        <main className="zn-page">{children}</main>
+        {/* <main className="zn-page">{children}</main> */}
+        <main className="zn-page">
+          <Container>
+            <Carona names={names} />
+          </Container>
+        </main>
       </>
     );
   };
